@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    restart: always
+    ports:
+      - "5678:5678"
+    env_file:
+      - .env
+    volumes:
+      - ./n8n:/root/.n8n
